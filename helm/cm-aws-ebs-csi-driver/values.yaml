@@ -1,0 +1,19 @@
+### For full list of options see:
+### https://github.com/kubernetes-sigs/aws-ebs-csi-driver/
+aws-ebs-csi-driver:
+  controller:
+    serviceAccount:
+      create: false # A service account will be created for you if set to true. Set to false if you want to use your own.
+      name: ebs-csi-controller-sa # Name of the service-account to be used/created.
+  node:
+    serviceAccount:
+      create: false
+      name: ebs-csi-node-sa
+
+  storageClasses: 
+    - name: ebs-sc
+      annotations:
+        storageclass.kubernetes.io/is-default-class: "true"
+      volumeBindingMode: WaitForFirstConsumer
+      reclaimPolicy: Retain
+
