@@ -4,6 +4,6 @@ name: cm-aws-ebs-csi-driver
 version: 0.0.0
 
 dependencies:
-- name: 
-  version: 
-  repository: 
+- name: aws-ebs-csi-driver
+  version: 2.12.1
+  repository: https://kubernetes-sigs.github.io/aws-ebs-csi-driver/index.yaml
