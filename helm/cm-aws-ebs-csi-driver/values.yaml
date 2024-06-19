@@ -16,4 +16,3 @@ aws-ebs-csi-driver:
         storageclass.kubernetes.io/is-default-class: "true"
       volumeBindingMode: WaitForFirstConsumer
       reclaimPolicy: Retain
-
